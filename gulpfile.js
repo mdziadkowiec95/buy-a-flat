@@ -24,6 +24,7 @@ const css = {
   build: dist + 'css',
   sassOptions: {
     // outputStyle: 'compressed',
+    // includePaths: ['./node_modules/'],
     errLogToConsole: true
   },
   watch: source + "sass/**/*.scss"

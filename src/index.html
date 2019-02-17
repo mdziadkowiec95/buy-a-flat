@@ -9,11 +9,48 @@
 </head>
 
 <body>
-  <div class="links">
-    <a href="http://travelize.michaldziadkowiec.pl">Travelize - fictional travel brand</a>
-    <br>
-    <a href="http://michaldziadkowiec.pl/movie-hunter">Movie Hunter - JavaScript App</a>
+  <div class="container">
+    <form action="/" class="search-form">
+
+      <div class="field investment">
+        <div class="select">
+          <select id="investment">
+            <option>Select investment</option>
+            <option>investment 1</option>
+            <option>investment 2</option>
+            <option>investment 3</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field price-range">
+        <input class="input min-price" type="number" id="min_price" placeholder="min. price">
+        <input class="input max-price" type="number" id="max_price" placeholder="max. price">
+      </div>
+
+      <div class="field floor-range">
+        <input class="input min-floor" type="number" id="min_floor" placeholder="min. floor">
+        <input class="input max-floor" type="number" id="max_floor" placeholder="max. floor">
+      </div>
+
+      <div class="field rooms-range">
+        <input class="input min-rooms" type="number" id="min_rooms" placeholder="min. rooms">
+        <input class="input max-rooms" type="number" id="max_rooms" placeholder="max. rooms">
+      </div>
+
+      <div class="field area-range">
+        <input class="input min-area" type="number" id="min_area" placeholder="min. area">
+        <input class="input max-area" type="number" id="max_area" placeholder="max. area">
+      </div>
+      <button class="button is-link search-button">Search</button>
+    </form>
+
+
   </div>
+
+
+
+
   <script src="js/bundle.js"></script>
 </body>
 

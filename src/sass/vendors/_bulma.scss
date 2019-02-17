@@ -1,0 +1,12 @@
+@import '../../../node_modules/bulma/sass/base/minireset.sass';
+
+@import '../../../node_modules/bulma/sass/utilities/_all.sass';
+@import '../../../node_modules/bulma/sass/elements/button.sass';
+@import '../../../node_modules/bulma/sass/elements/container.sass';
+@import '../../../node_modules/bulma/sass/elements/form.sass';  
+// @import '../../../node_modules/bulma/bulma.sass';
+
+
+.test {
+  display: flex;
+}

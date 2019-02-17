@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Investment 1",
+  "description": "Flats from investment number 1",
+  "type": "object",
+  "investment": "Investment 1 name",
+  "location": "5th avenue",
+  "flats": [
+    {
+      "flatID": "F1",
+      "price": "252366",
+      "floor": "3",
+      "rooms": "2",
+      "area": "25.73"
+    },
+    {
+      "flatID": "F2",
+      "price": "532246",
+      "floor": "1",
+      "rooms": "7",
+      "area": "52.73"
+    },
+    {
+      "flatID": "F3",
+      "price": "145566",
+      "floor": "6",
+      "rooms": "4",
+      "area": "42.73"
+    },
+    {
+      "flatID": "F4",
+      "price": "5245566",
+      "floor": "2",
+      "rooms": "1",
+      "area": "72.73"
+    }
+  ]
+}

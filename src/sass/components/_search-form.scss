@@ -1,0 +1,13 @@
+.search-form {
+  display: flex;
+
+  padding: 1rem;
+  
+  border: 1px solid #dddeee;
+
+  box-shadow: 0 0 .6rem #dddeee;
+
+  .field { 
+    margin: 0 .5em;
+  }
+}
