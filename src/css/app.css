@@ -1,0 +1,23 @@
+body {
+  background: #141E30;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#243B55), to(#141E30));
+  background: linear-gradient(to right, #243B55, #141E30);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+html {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+h1 {
+  color: green;
+  font-size: 124px; }
+
+.links a {
+  color: #fff; }
+
+/*# sourceMappingURL=app.css.map */
