@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700");
 /*! minireset.css v0.0.4 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
@@ -2067,11 +2068,6 @@ th {
   .control.is-loading.is-large:after {
     font-size: 1.5rem; }
 
-.test {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
 .search-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2082,6 +2078,9 @@ th {
           box-shadow: 0 0 .6rem #dddeee; }
   .search-form .field {
     margin: 0 .5em; }
+  .search-form .label {
+    font-size: .8em;
+    text-transform: uppercase; }
 
 h1 {
   color: green;

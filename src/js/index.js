@@ -4,7 +4,9 @@ import * as investmentView from './views/investmentView';
 
 
 const state = {
-
+  /** 
+   * investment: {Investment instance}
+   */
 }
 
 window.s = state;
@@ -15,11 +17,13 @@ const controlFiltering = async () => {
   const newFilters = investmentView.getFilters();
   // console.log(newFilters);
 
-  // console.log(newFilters.investment);
-  // console.log(state.investment.filters.investment);
 
+
+  // Data is not fetched yet OR user changed Investment
   if (!state.investment || (newFilters.investment !== state.investment.filters.investment)) {
     console.log('poszło');
+
+    investmentView.clearInputs();
 
     try {
       state.investment = new Investment(newFilters);
@@ -35,6 +39,10 @@ const controlFiltering = async () => {
 
     state.investment.filters = newFilters;
 
+    state.investment.filterFlats(state.investment.filters);
+
+    investmentView.renderFlats(state.investment.filteredFlats);
+
   } else {
 
     console.log('nic sie nie zmienilo');
@@ -43,15 +51,6 @@ const controlFiltering = async () => {
 }
 
 
-
-const filterFlats = () => {
-  const filteredArr = state.flats.filter(flat => {
-    return flat.rooms >= 4;
-  });
-
-  console.log(filteredArr);
-
-};
 
 
 document.querySelector('.search-form').addEventListener('submit', e => {

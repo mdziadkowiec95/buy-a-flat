@@ -30,6 +30,10 @@ const css = {
   watch: source + "sass/**/*.scss"
 };
 
+const js = {
+  watch: source + 'js/**/*.js',
+};
+
 // BrowserSync settings
 const syncOpts = {
   server: {
@@ -49,6 +53,7 @@ function clean(cb) {
 
 function watchFiles() {
   watch(css.watch, series(styles))
+  watch(js.watch, series(jsDev))
 }
 
 function styles(cb) {
@@ -78,7 +83,6 @@ function jsDev(cb) {
   src('src/js/index.js')
     .pipe(webpackStream(webpackConfigDev), webpack)
     .pipe(dest('src/js'))
-  browsersync.reload()
   cb()
 }
 
@@ -93,7 +97,7 @@ function html(cb) {
 
 function bSync(cb) {
   browsersync.init(syncOpts)
-  watch(source + 'js/index.js', jsDev)
+  // watch(source + 'js/index.js', jsDev)
 
   cb()
 }
