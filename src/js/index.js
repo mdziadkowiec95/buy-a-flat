@@ -1,6 +1,8 @@
+import Slider from './models/Slider';
 import Search from './models/Search';
 import * as searchView from './views/searchView';
 import * as singleFlatView from './views/singleFlatView';
+import * as sliderView from './views/sliderView';
 import './views/base';
 import { renderLoader, removeLoader } from './views/base';
 
@@ -112,4 +114,17 @@ document.querySelector('.flats').addEventListener('click', e => {
   }
 });
 
+
+
+//  SLIDER controller
+
+
+// window.slider = slider;
+
+
+
+
+window.addEventListener('load', () => {
+  sliderView.startSlider(1000);
+});
 

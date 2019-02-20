@@ -7,10 +7,13 @@
 @import 'utils/animations';
 @import 'base/global';
 @import 'vendors/bulma';
+@import 'components/slider';
 @import 'components/search-form';
 @import 'components/flats-table';
 @import 'components/flat-preview';
 @import 'components/loader';
+
+@import 'sections/header';
 
 
 h1 {
