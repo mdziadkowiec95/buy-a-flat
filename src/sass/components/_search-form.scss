@@ -7,6 +7,10 @@
 
   box-shadow: 0 0 .6rem #dddeee;
 
+  .select option:first-child {
+    margin-top: 1rem;
+  }
+
   .field { 
     margin: 0 .5em;
   }

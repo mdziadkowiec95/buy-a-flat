@@ -1,14 +1,15 @@
-// import "regenerator-runtime";
 import '@babel/polyfill';
 
-export default class Investment {
+export default class Search {
   constructor(filters) {
     this.filters = filters;
   }
 
-  async getFlats() {
+  async getFlats(investment) {
+    const name = investment.replace(' ', '').toLowerCase();
+
     try {
-      const res = await fetch('/investment_1.json')
+      const res = await fetch(`/${name}.json`);
       const data = await res.json();
 
       this.flats = data.flats;
@@ -29,6 +30,14 @@ export default class Investment {
     }
 
     return differences > 0;
+  }
+
+  calcPricePerMeter() {
+    this.flats.forEach(flat => {
+      const price = Math.floor(flat.price / flat.area);
+
+      flat.pricePerMeter = price;
+    });
   }
 
   filterFlats(filters) {
@@ -52,21 +61,30 @@ export default class Investment {
       }
     };
 
-    debugger;
-
+    // set initial falts state
     this.filteredFlats = this.flats;
 
+    // Loop through every flat properties and check if it matches the ranges
     for (const key in ranges) {
       console.log(key, ranges[key]);
+
       this.filteredFlats = this.filteredFlats.filter(flat => parseFloat(flat[key]) >= parseFloat(ranges[key].min) && flat[key] < parseFloat(ranges[key].max));
     }
+  }
+
+  sortFlats(sortType, sortDirection) {
+
+
+    this.filteredFlats.sort((a, b) => sortDirection === 'ascending' ? a[sortType] - b[sortType] : b[sortType] - a[sortType]);
 
 
 
-    // this.filteredFlats = this.flats.filter(el => parseFloat(el.price) >= parseFloat(ranges.price.min) && el.price < ranges.price.max);
 
+    // const test = this.filteredFlats.sort((a, b) => {
+    //   sortDirection === 'ascending' ? a[sortType] - b[sortType] : b[sortType] - a[sortType];
+    // });
 
-
+    // console.log(test);
   }
 }
 

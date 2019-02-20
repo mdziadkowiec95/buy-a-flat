@@ -1,0 +1,23 @@
+.modal {
+  .modal-card {
+    max-width: 1000px;
+  }
+
+  .close-btn {
+    transition: opacity .25s ease;
+
+    border: 0;
+
+    outline: 0;
+
+    background: none;
+
+    font-size: 2rem;
+    
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

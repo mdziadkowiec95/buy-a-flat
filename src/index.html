@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="css/app.css">
 </head>
 
@@ -15,7 +17,6 @@
       <div class="field investment">
         <div class="select">
           <select id="investment">
-            <option>Select investment</option>
             <option>investment 1</option>
             <option>investment 2</option>
             <option>investment 3</option>
@@ -50,10 +51,47 @@
     </form>
 
     <div class="flats">
+      <table class="table">
+        <thead>
+          <tr class="table-nav">
+            <th class="table-nav-item" data-sort="flatID"><abbr title="Position">ID</abbr></th>
+            <th class="table-nav-item" data-sort="floor"><abbr title="Floor">Floor</abbr></th>
+            <th class="table-nav-item" data-sort="rooms"><abbr title="Rooms">Rooms</abbr></th>
+            <th class="table-nav-item" data-sort="area"><abbr title="Area">Area</abbr></th>
+            <th class="table-nav-item" data-sort="price"><abbr title="Price">Price</abbr></th>
+            <th class="table-nav-item" data-sort="pricePerMeter"><abbr title="Price per m2">Price / m2</abbr></th>
+            <th class="table-nav-item" data-sort="status"><abbr title="Status">Status</abbr></th>
+            <th><abbr title="Points">Preview</abbr></th>
+          </tr>
+        </thead>
+        <!-- flats will be rendered here -->
+      </table>
+
+
+      <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Flat preview</p>
+            <button class="close-btn" aria-label="close">
+              <i class="fas fa-times-circle"></i>
+            </button>
+          </header>
+          <section class="modal-card-body">
+            <!-- Content ... -->
+          </section>
+          <footer class="modal-card-foot">
+
+          </footer>
+        </div>
+      </div>
 
     </div>
 
+
+
   </div>
+  <!-- end of container -->
 
 
 

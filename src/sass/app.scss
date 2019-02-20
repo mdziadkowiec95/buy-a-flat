@@ -1,13 +1,16 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
 
-$family-sans-serif: 'Montserrat', sans-serif;
-$family-primary:  'Montserrat', sans-serif;
+
 
 @import 'utils/variables';
+@import 'utils/animations';
 @import 'base/global';
 @import 'vendors/bulma';
 @import 'components/search-form';
+@import 'components/flats-table';
+@import 'components/flat-preview';
+@import 'components/loader';
 
 
 h1 {

@@ -1,0 +1,14 @@
+.flats {
+  padding: 1rem;
+
+  border: 1px solid #eee;
+  .table {
+    // overflow-x: hidden;
+
+    width: 100%;
+  }
+
+  .table-body {
+    animation: flash .4s ease;
+  }
+}
