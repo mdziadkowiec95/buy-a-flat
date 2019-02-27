@@ -12,100 +12,135 @@
 
 <body>
   <header class="header">
+    <div class="header__inner">
+      <nav class="header__nav">
+        <ul class="nav">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Offer</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Section</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Section</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Section</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="slogan">
+        <h1 class="slogan__title">FLINVEST</h1>
+        <h1 class="slogan__subtitle">25 years of experience</h1>
+      </div>
+    </div>
+
+
     <div class="slider">
+
       <div class="slider__wrapper">
         <div class="slider__track">
-          <div class="slider__item">1</div>
-          <div class="slider__item">2</div>
-          <div class="slider__item">3</div>
-          <div class="slider__item">4</div>
+          <div class="slider__item slider__item--1">
+          </div>
+          <div class="slider__item slider__item--2">
+
+          </div>
+          <div class="slider__item slider__item--3">
+
+          </div>
         </div>
       </div>
       <div class="slider-controls">
-        <button class="slider__prev" data-target="prev">Prev</button>
-        <button class="slider__next" data-target="next">Next</button>
+        <button class="slider__arrow slider__arrow--prev">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <button class="slider__arrow slider__arrow--next">
+          <i class="fas fa-arrow-right"></i>
+        </button>
       </div>
     </div>
   </header>
+  <section class="offer">
+    <div class="container">
+      <form action="/" class="search-form">
 
-  <div class="container">
-    <form action="/" class="search-form">
-
-      <div class="field investment">
-        <div class="select">
-          <select id="investment">
-            <option>investment 1</option>
-            <option>investment 2</option>
-            <option>investment 3</option>
-          </select>
+        <div class="field investment">
+          <div class="select">
+            <select id="investment">
+              <option>investment 1</option>
+              <option>investment 2</option>
+              <option>investment 3</option>
+            </select>
+          </div>
         </div>
-      </div>
 
-      <div class="field price-range">
-        <label for="min_price" class="label">Price</label>
-        <input class="input min-price" type="number" id="min_price" placeholder="min. price">
-        <input class="input max-price" type="number" id="max_price" placeholder="max. price">
-      </div>
-
-      <div class="field floor-range">
-        <label class="label">Floor</label>
-        <input class="input min-floor" type="number" id="min_floor" placeholder="min. floor">
-        <input class="input max-floor" type="number" id="max_floor" placeholder="max. floor">
-      </div>
-
-      <div class="field rooms-range">
-        <label class="label">Rooms</label>
-        <input class="input min-rooms" type="number" id="min_rooms" placeholder="min. rooms">
-        <input class="input max-rooms" type="number" id="max_rooms" placeholder="max. rooms">
-      </div>
-
-      <div class="field area-range">
-        <label class="label">Area</label>
-        <input class="input min-area" type="number" id="min_area" placeholder="min. area">
-        <input class="input max-area" type="number" id="max_area" placeholder="max. area">
-      </div>
-      <button class="button is-link search-button">Search</button>
-    </form>
-
-    <div class="flats">
-      <table class="table">
-        <thead>
-          <tr class="table-nav">
-            <th class="table-nav-item" data-sort="flatID"><abbr title="Position">ID</abbr></th>
-            <th class="table-nav-item" data-sort="floor"><abbr title="Floor">Floor</abbr></th>
-            <th class="table-nav-item" data-sort="rooms"><abbr title="Rooms">Rooms</abbr></th>
-            <th class="table-nav-item" data-sort="area"><abbr title="Area">Area</abbr></th>
-            <th class="table-nav-item" data-sort="price"><abbr title="Price">Price</abbr></th>
-            <th class="table-nav-item" data-sort="pricePerMeter"><abbr title="Price per m2">Price / m2</abbr></th>
-            <th class="table-nav-item" data-sort="status"><abbr title="Status">Status</abbr></th>
-            <th><abbr title="Points">Preview</abbr></th>
-          </tr>
-        </thead>
-        <!-- flats will be rendered here -->
-      </table>
-
-
-      <div class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-          <header class="modal-card-head">
-            <p class="modal-card-title">Flat preview</p>
-            <button class="close-btn" aria-label="close">
-              <i class="fas fa-times-circle"></i>
-            </button>
-          </header>
-          <section class="modal-card-body">
-            <!-- Content ... -->
-          </section>
-          <footer class="modal-card-foot">
-
-          </footer>
+        <div class="field price-range">
+          <label for="min_price" class="label">Price</label>
+          <input class="input min-price" type="number" id="min_price" placeholder="min. price">
+          <input class="input max-price" type="number" id="max_price" placeholder="max. price">
         </div>
-      </div>
 
+        <div class="field floor-range">
+          <label class="label">Floor</label>
+          <input class="input min-floor" type="number" id="min_floor" placeholder="min. floor">
+          <input class="input max-floor" type="number" id="max_floor" placeholder="max. floor">
+        </div>
+
+        <div class="field rooms-range">
+          <label class="label">Rooms</label>
+          <input class="input min-rooms" type="number" id="min_rooms" placeholder="min. rooms">
+          <input class="input max-rooms" type="number" id="max_rooms" placeholder="max. rooms">
+        </div>
+
+        <div class="field area-range">
+          <label class="label">Area</label>
+          <input class="input min-area" type="number" id="min_area" placeholder="min. area">
+          <input class="input max-area" type="number" id="max_area" placeholder="max. area">
+        </div>
+        <button class="button is-link search-button">Search</button>
+      </form>
+
+      <div class="flats">
+        <table class="table">
+          <thead>
+            <tr class="table-nav">
+              <th class="table-nav-item" data-sort="flatID"><abbr title="Position">ID</abbr></th>
+              <th class="table-nav-item" data-sort="floor"><abbr title="Floor">Floor</abbr></th>
+              <th class="table-nav-item" data-sort="rooms"><abbr title="Rooms">Rooms</abbr></th>
+              <th class="table-nav-item" data-sort="area"><abbr title="Area">Area</abbr></th>
+              <th class="table-nav-item" data-sort="price"><abbr title="Price">Price</abbr></th>
+              <th class="table-nav-item" data-sort="pricePerMeter"><abbr title="Price per m2">Price / m2</abbr></th>
+              <th class="table-nav-item" data-sort="status"><abbr title="Status">Status</abbr></th>
+              <th><abbr title="Points">Preview</abbr></th>
+            </tr>
+          </thead>
+          <!-- flats will be rendered here -->
+        </table>
+
+
+        <div class="modal">
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title">Flat preview</p>
+              <button class="close-btn" aria-label="close">
+                <i class="fas fa-times-circle"></i>
+              </button>
+            </header>
+            <section class="modal-card-body">
+              <!-- Content ... -->
+            </section>
+            <footer class="modal-card-foot">
+
+            </footer>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div>
-  <!-- end of container -->
+    <!-- end of container -->
+  </section>
+
 
 
 

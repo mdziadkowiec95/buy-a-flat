@@ -127,7 +127,7 @@ document.querySelector('.flats').addEventListener('click', e => {
 window.addEventListener('load', () => {
   sliderView.startSlider({
     duration: 500,
-    fadeMode: false
+    fadeMode: true
   });
 });
 

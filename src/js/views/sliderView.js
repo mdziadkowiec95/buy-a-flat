@@ -20,9 +20,21 @@ export const startSlider = (options) => {
 
   sliderTrack.style.width = `${(sliderItemsLength + 2) * 100}%`;
 
-  let singleSlideWidth = 100 / (sliderItemsLength + 2);
+  const singleSlideWidth = 100 / (sliderItemsLength + 2);
 
-  sliderTrack.style.transform = `translate(-${singleSlideWidth}%, 0)`;
+
+
+  const setPosition = percentage => {
+    sliderTrack.classList.add('transition-off');
+
+    sliderTrack.style.WebkitTransform = sliderTrack.style.transform = 'translate(-' + percentage + '%, 0)';
+
+    setTimeout(() => {
+      sliderTrack.classList.remove('transition-off');
+    }, 0);
+
+  }
+  setPosition(singleSlideWidth);
 
   allItems.forEach(item => item.style.width = `${singleSlideWidth}%`);
 
@@ -51,63 +63,30 @@ export const startSlider = (options) => {
 
       curSlide = index;
 
-
-
-      // sliderTrack.style.WebkitTransform = sliderTrack.style.transform = 'translate(-' + (index * singleSlideWidth) + '%, 0)';
-
-
-
-      console.log('added');
       console.log(index);
-
 
       sliderTrack.addEventListener('transitionend', e => {
 
-
-
         if (curSlide === 0) {
-          console.log('if');
-          console.log(index);
 
-          sliderTrack.classList.add('transition-off');
-
-          sliderTrack.style.WebkitTransform = sliderTrack.style.transform = 'translate(-' + (sliderItemsLength * singleSlideWidth) + '%, 0)';
-
-          setTimeout(() => {
-            sliderTrack.classList.remove('transition-off');
-          }, 0);
+          setPosition(sliderItemsLength * singleSlideWidth);
 
           curSlide = sliderItemsLength;
 
         } else if (curSlide > sliderItemsLength) {
 
-          console.log('else');
-
-          sliderTrack.classList.add('transition-off');
-
-          sliderTrack.style.WebkitTransform = sliderTrack.style.transform = 'translate(-' + (1 * singleSlideWidth) + '%, 0)';
-
-          setTimeout(() => {
-            sliderTrack.classList.remove('transition-off');
-          }, 0);
+          setPosition(1 * singleSlideWidth);
 
           curSlide = 1;
-
         }
 
         sliderTrack.classList.remove('is-sliding');
-
-
 
       });
 
     }
 
-
-
-
   };
-
 
   // autoplay 
   if (options.duration >= 1000) {
@@ -118,13 +97,14 @@ export const startSlider = (options) => {
 
   document.querySelector('.slider-controls').addEventListener('click', e => {
 
-    if (e.target.matches('.slider__prev')) {
+    if (e.target.matches('.slider__arrow--prev, .slider__arrow--prev *')) {
+      console.log('prev');
       prev();
-    } else if (e.target.matches('.slider__next')) {
+    } else if (e.target.matches('.slider__arrow--next, .slider__arrow--next *')) {
+      console.log('next');
       next();
     }
 
   });
-
 
 };

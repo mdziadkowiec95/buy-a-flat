@@ -1,11 +1,46 @@
+
+
 // -----------  Bulma ovverides
-$font-sans-serif: 'Montserrat', sans-serif;
+$family-sans-serif: "Montserrat", sans-serif; 
 $family-sans-serif: 'Montserrat', sans-serif;
 $family-secondary: 'Montserrat', sans-serif;
+
+$link: #AF1D22;
 // Table
 $table-cell-padding: 1rem .5rem;
 
 
 // Modal (flat preview)
 
-$modal-content-width: 80%;
+$modal-content-width: 80%; 
+
+
+$customColors: (
+  white: (
+    0: #fff,
+  ),
+  dark: (
+    0: #032839,
+    1: #0E394B,
+  ),
+  accent: (
+    0: #AF1D22,
+  ),
+  light: (
+    0: hsl(198, 74%, 49%),
+    1: hsl(200, 72%, 61%),
+    2: hsl(200, 71%, 73%)
+  ),
+  red: (
+    0: hsl(3, 72%, 62%),
+    1: hsl(4, 85%, 66%),
+    2: hsl(4, 84%, 78%),
+  )
+);
+
+$layers: (
+  nav: 20,
+  slogan: 10
+);
+
+ 

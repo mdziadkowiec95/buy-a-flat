@@ -3,24 +3,28 @@
 
 
 
+
 @import 'utils/variables';
+@import 'utils/functions';
 @import 'utils/animations';
-@import 'base/global';
+
 @import 'vendors/bulma';
+@import 'base/global';
+@import 'base/typography';
+@import 'components/nav';
 @import 'components/slider';
+@import 'components/slogan';
 @import 'components/search-form';
 @import 'components/flats-table';
 @import 'components/flat-preview';
 @import 'components/loader';
 
 @import 'sections/header';
+@import 'sections/offer';
+ 
 
 
-h1 {
-  color: green;
-  font-size: 124px;
-}
 
-.links a {
-  color: #fff; 
+.links a { 
+  color: #fff;
 }

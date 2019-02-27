@@ -1,22 +1,29 @@
 .search-form {
   display: flex;
 
+  position: relative;
+
+  z-index: 10;
+  
   padding: 1rem;
+
+  background-color: get-color(white);
   
   border: 1px solid #dddeee;
 
-  box-shadow: 0 0 .6rem #dddeee;
+  box-shadow: 0 0 .3rem rgba(36, 36, 36, 0.3);
 
   .select option:first-child {
     margin-top: 1rem;
   }
 
   .field { 
-    margin: 0 .5em;
+    margin: 0 .5rem;
   }
 
   .label {
-    font-size: .8em;
+    font-size: .8rem;
+
     text-transform: uppercase; 
   }
 }

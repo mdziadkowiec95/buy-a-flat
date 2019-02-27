@@ -3,6 +3,11 @@ export default class Slider {
     this.userItems = items;
   };
 
+  prepareData() {
+    
+
+  }
+
 
 
 
