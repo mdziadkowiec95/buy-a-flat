@@ -61,7 +61,7 @@ export default class Search {
       }
     };
 
-    // set initial falts state
+    // set initial flats state
     this.filteredFlats = this.flats;
 
     // Loop through every flat properties and check if it matches the ranges
@@ -72,19 +72,19 @@ export default class Search {
     }
   }
 
-  sortFlats(sortType, sortDirection) {
+  // setSortMode(type) {
+  //   const types = ['flatID', 'floor', 'rooms', 'area', 'price', 'pricePerMeter'];
 
+  //   if (types.indexOf(type) > -1) this.sortMode = type;
+
+  //   console.log(this.sortMode);
+
+  // }
+
+  sortFlats(sortType, sortDirection) {
 
     this.filteredFlats.sort((a, b) => sortDirection === 'ascending' ? a[sortType] - b[sortType] : b[sortType] - a[sortType]);
 
-
-
-
-    // const test = this.filteredFlats.sort((a, b) => {
-    //   sortDirection === 'ascending' ? a[sortType] - b[sortType] : b[sortType] - a[sortType];
-    // });
-
-    // console.log(test);
   }
 }
 

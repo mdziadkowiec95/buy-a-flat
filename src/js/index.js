@@ -1,4 +1,3 @@
-import Slider from './models/Slider';
 import Search from './models/Search';
 import * as searchView from './views/searchView';
 import * as singleFlatView from './views/singleFlatView';
@@ -76,6 +75,8 @@ const controlSorting = (target) => {
   if (state.activeInvestment && state.activeInvestment.filteredFlats) {
     const sortNavItem = target.closest('.table-nav-item');
     // console.log(target.closest('.table-nav-item').dataset);
+
+    // state.activeInvestment.setSortMode(sortNavItem.getAttribute('data-sort'));
     const sortDirection = searchView.handleSortingClasses(sortNavItem);
 
     state.activeInvestment.sortFlats(sortNavItem.dataset.sort, sortDirection);

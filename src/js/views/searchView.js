@@ -65,10 +65,7 @@ export const clearFlats = () => {
 export const handleSortingClasses = el => {
   let sortDirection;
 
-  if (el.className === 'table-nav-item') {
-    el.classList.add('ascending');
-    sortDirection = 'ascending';
-  } else if (!el.classList.contains('ascending')) {
+  if (!el.classList.contains('ascending')) {
     el.classList.remove('descending');
     el.classList.add('ascending');
     sortDirection = 'ascending';
