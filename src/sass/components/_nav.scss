@@ -1,7 +1,21 @@
 .nav {
+  position: fixed;
+
+  z-index: map-get($layers, nav); 
+
+  top: -100vh;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
   display: flex;
+
+  flex-direction: column;
   
-  justify-content: flex-end;
+  justify-content: center;
+
+  align-items: center;
 
   flex-wrap: wrap;
 
@@ -9,7 +23,30 @@
 
   padding: 0 3rem;
 
-  background-color: rgba(get-color(dark, 1), .7);
+  background-color: rgba(map-get($theme, dark), .7);
+
+  opacity: 0;
+
+  transition: top .6s, opacity .6s;
+  transition-timing-function: map-get($easings, easeOutEx);
+
+  @include tablet {
+    position: static;
+
+    flex-direction: row;
+    justify-content: flex-end;
+
+    width: auto;
+    height: auto;
+
+    opacity: 1;
+  }
+
+  &.collapsed {
+    top: 0;
+    
+    opacity: 1;
+  }
 
   &__item {
 
@@ -19,8 +56,66 @@
   &__link {
   
     &:hover {
-      color: get-color(accent);
+      color: map-get($theme, accent);
     }
   }
   
+}
+
+.nav-toggler {
+  display: block;
+
+  z-index: map-get($layers, nav-toggler); 
+
+  position: fixed;
+
+  top: 20px;
+  right: 20px;
+
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+
+  @include tablet {
+    display: none;
+  }
+
+  span {
+    display: block;
+    
+    
+    position: absolute;
+
+    top: 18px;
+
+    width: 100%;
+    height: 3px;
+
+    background-color: map-get($theme, accent);
+
+    &::before,
+    &::after {
+      content: '';
+
+      position: absolute;
+
+      width: 100%;
+      height: 3px;
+
+      background-color: map-get($theme, accent);
+    }
+
+    &::before {
+      top: -10px;
+    }
+
+    &::after {
+      bottom: -10px;
+    }
+  }
+
+  &.is-open {
+   
+  }
 }

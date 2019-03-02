@@ -13,6 +13,7 @@
 @import 'base/typography';
 @import 'components/nav';
 @import 'components/slider';
+@import 'components/brand';
 @import 'components/slogan';
 @import 'components/search-form';
 @import 'components/flats-table';
@@ -22,7 +23,9 @@
 @import 'sections/header';
 @import 'sections/offer';
  
-
+* {
+  box-sizing: border-box;
+}
 
 
 .links a { 

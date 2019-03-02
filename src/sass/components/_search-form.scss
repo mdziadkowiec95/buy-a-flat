@@ -2,16 +2,16 @@
   display: flex;
 
   position: relative;
-
-  z-index: 10;
   
   padding: 1rem;
 
-  background-color: get-color(white);
+  background-color: map-get($theme, light);
   
   border: 1px solid #dddeee;
 
-  box-shadow: 0 0 .3rem rgba(36, 36, 36, 0.3);
+  box-shadow: 0 0 1rem rgba(36, 36, 36, 0.5);
+
+  z-index: 10;
 
   .select option:first-child {
     margin-top: 1rem;
@@ -19,6 +19,19 @@
 
   .field { 
     margin: 0 .5rem;
+  }
+
+  .input {
+    &::placeholder {
+      color: map-get($theme, gray);
+    }
+
+    // &:focus {
+    //   &::placeholder {
+    //     top: -30px;
+    //   }
+    // }
+  
   }
 
   .label {

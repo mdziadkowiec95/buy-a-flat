@@ -14,7 +14,9 @@ a:link,
 a:visited {
   transition: color .25s ease;
   
-  color: get-color(white);
+  color: map-get($theme, light);
   
   text-decoration: none;
+
+  cursor: pointer;
 }

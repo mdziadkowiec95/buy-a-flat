@@ -5,6 +5,9 @@ import * as sliderView from './views/sliderView';
 import './views/base';
 import { renderLoader, removeLoader } from './views/base';
 
+// components 
+import './components/navigation';
+
 
 
 const state = {
@@ -127,7 +130,7 @@ document.querySelector('.flats').addEventListener('click', e => {
 
 window.addEventListener('load', () => {
   sliderView.startSlider({
-    duration: 500,
+    duration: 4000,
     fadeMode: true
   });
 });

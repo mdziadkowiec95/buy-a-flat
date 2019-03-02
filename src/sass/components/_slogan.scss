@@ -1,19 +1,35 @@
 .slogan {
-  z-index: map-get($layers, slogan);
+  display: flex;
 
-  position: absolute;
-  top: 0;
-  left: 0;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 
-  width: 35%;
   height: 100%;
+ 
+
+  margin-left: auto;
+  z-index: 2000; 
   
+
+  @include tablet {
+    max-width: 45%;
+  }
+
+&__content {
+  
+  align-self: center;
+
   padding: 2rem;
 
-  background-color: rgba(get-color(dark, 1), .7);
-  color: get-color(white);
+  font-size: 2.5rem;
 
-  &__title {
-    font-size: 2.5rem;
+  background-color: rgba(map-get($theme, dark--lighten), .5);
+  color: map-get($theme, light);
+
+  opacity: 0;
+  
+
+  transition: opacity .3s ease .3s;
   }
+
 }

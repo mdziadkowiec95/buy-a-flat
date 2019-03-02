@@ -16,12 +16,11 @@ export const startSlider = (options) => {
 
   const allItems = [].slice.call(document.querySelectorAll('.slider__item'));
 
-  console.log(allItems);
-
-  sliderTrack.style.width = `${(sliderItemsLength + 2) * 100}%`;
-
-  const singleSlideWidth = 100 / (sliderItemsLength + 2);
-
+  const setActiveClass = index => {
+    console.log(`setActive ===> ${index}`);
+    [].slice.call(sliderItems).forEach(slide => slide.classList.remove('slider__item--active'));
+    sliderItems[index].classList.add('slider__item--active');
+  }
 
 
   const setPosition = percentage => {
@@ -34,9 +33,24 @@ export const startSlider = (options) => {
     }, 0);
 
   }
-  setPosition(singleSlideWidth);
+
+  sliderTrack.style.width = `${(sliderItemsLength + 2) * 100}%`;
+
+  const singleSlideWidth = 100 / (sliderItemsLength + 2);
 
   allItems.forEach(item => item.style.width = `${singleSlideWidth}%`);
+
+  slider.classList.add('initialized');
+
+
+
+  setPosition(singleSlideWidth);
+
+  setActiveClass(1);
+
+
+
+
 
 
   // fade mode
@@ -52,6 +66,8 @@ export const startSlider = (options) => {
 
   const changeSlide = index => {
     // update curSlide
+    console.log(`Start index: ${index}`);
+
     if (!sliderTrack.classList.contains('is-sliding')) {
 
 
@@ -60,6 +76,9 @@ export const startSlider = (options) => {
 
 
       sliderTrack.style.WebkitTransform = sliderTrack.style.transform = 'translate(-' + (index * singleSlideWidth) + '%, 0)';
+
+      if (index !== 0 && index < sliderItemsLength + 1) setActiveClass(index);
+
 
       curSlide = index;
 
@@ -70,12 +89,14 @@ export const startSlider = (options) => {
         if (curSlide === 0) {
 
           setPosition(sliderItemsLength * singleSlideWidth);
+          setActiveClass(3);
 
           curSlide = sliderItemsLength;
 
         } else if (curSlide > sliderItemsLength) {
 
           setPosition(1 * singleSlideWidth);
+          setActiveClass(1);
 
           curSlide = 1;
         }
